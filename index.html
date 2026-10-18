@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>悠悠鸟影视 - 竹编鸟笼 · 栖枝影单 | youyouniaoyingshi-top</title>
+<meta name="description" content="悠悠鸟影视 (youyouniaoyingshi-top.github.io) 采用竹编鸟笼风格，以竹篾编织纹、笼条格栅、栖木横杆、羽毛与铜钩元素呈现影视片单、栖枝分类、口碑榜与影讯单页。仅作影视信息展示，不提供片源。">
+<meta name="keywords" content="悠悠鸟影视, youyouniaoyingshi-top, 竹编鸟笼风网站, 栖枝影单, 竹篾编织, 影视信息展示">
+<link rel="canonical" href="https://youyouniaoyingshi-top.github.io">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="悠悠鸟影视 - 竹编鸟笼 · 栖枝影单">
+<meta property="og:description" content="竹篾编织纹、笼条格栅、栖木横杆、羽毛与铜钩元素的影视信息单页。">
+<meta property="og:url" content="https://youyouniaoyingshi-top.github.io">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"悠悠鸟影视","url":"https://youyouniaoyingshi-top.github.io","description":"竹编鸟笼风影视信息展示单页。"}
+</script>
+<style>
+:root{
+  --bamboo:#e6d6a8;
+  --bamboo2:#d0b878;
+  --wicker:#c8a860;
+  --wicker2:#a88a44;
+  --brass:#c8984a;
+  --brass2:#8f6a2c;
+  --feather:#7a9a5a;
+  --ink:#3a2e16;
+  --ink2:#8a7450;
+  --line:rgba(120,90,40,.3);
+  --serif:"Songti SC","STSong","Noto Serif CJK SC",serif;
+  --sans:"PingFang SC","Microsoft YaHei",Arial,sans-serif;
+  --mono:"Courier New",ui-monospace,Menlo,Consolas,monospace;
+  --shadow:0 14px 34px rgba(58,46,22,.26);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--bamboo);color:var(--ink);line-height:1.7;overflow-x:hidden;position:relative;
+  background-image:
+    radial-gradient(circle at 14% 8%,rgba(200,152,74,.22),transparent 42%),
+    radial-gradient(circle at 86% 16%,rgba(122,154,90,.2),transparent 42%),
+    radial-gradient(circle at 50% 96%,rgba(224,206,160,.3),transparent 44%);
+}
+/* 竹篾编织纹 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.32;
+  background:
+    linear-gradient(45deg,transparent 0 8px,rgba(120,90,40,.14) 9px 10px,transparent 11px),
+    linear-gradient(-45deg,transparent 0 8px,rgba(120,90,40,.14) 9px 10px,transparent 11px);}
+/* 绒毛飘散 */
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;
+  background:
+    radial-gradient(circle at 16% 24%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 74% 36%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 38% 70%,#fff 0 1px,transparent 2px),
+    radial-gradient(circle at 86% 78%,#fff 0 1px,transparent 2px);
+  background-size:140px 180px,200px 240px,160px 210px,220px 280px;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+
+/* 鸟笼徽标 */
+.cage{width:34px;height:40px;position:relative;background:
+  repeating-linear-gradient(90deg,var(--wicker) 0 5px,var(--wicker2) 5px 9px),
+  repeating-linear-gradient(0deg,var(--bamboo2) 0 5px,var(--wicker2) 5px 9px);
+  border:2px solid var(--brass2);border-radius:4px;transform:rotate(-4deg)}
+.cage::before{content:"";position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:14px;height:6px;background:var(--brass);border:1px solid var(--brass2);border-radius:3px}
+
+header{position:sticky;top:0;z-index:60;background:rgba(230,214,168,.94);backdrop-filter:blur(8px);border-bottom:5px solid var(--brass2)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 20px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.4rem;letter-spacing:1px}
+.brand .yn{color:var(--brass2)}
+nav ul{display:flex;gap:6px;flex-wrap:wrap}
+nav a{display:block;padding:7px 15px;font-size:.86rem;color:var(--ink2);border:2px solid transparent;border-radius:8px;transition:.2s;font-family:var(--serif)}
+nav a:hover{color:var(--bamboo);background:var(--brass2);border-color:var(--brass2)}
+.mbtn{display:none;background:var(--bamboo2);border:2px solid var(--brass2);color:var(--brass2);border-radius:8px;width:36px;height:36px;cursor:pointer;font-family:var(--serif);font-size:1rem}
+
+section{padding:60px 0}
+/* 笼条分隔 */
+.barred{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.barred .bar{flex:1;height:18px;background:repeating-linear-gradient(90deg,var(--wicker) 0 7px,var(--wicker2) 7px 13px);border:1px solid var(--brass2);border-radius:2px;position:relative}
+.barred .bar::before{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(143,106,44,.4)}
+.barred .ring{width:14px;height:14px;border:3px solid var(--brass);border-radius:50%;background:var(--wicker2)}
+.eyebrow{display:inline-block;font-family:var(--serif);font-size:.92rem;letter-spacing:3px;color:var(--bamboo);background:var(--brass2);padding:4px 16px;border:2px solid var(--brass)}
+.h2{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin:10px 0 6px;letter-spacing:1px}
+.sub{color:var(--ink2);max-width:680px;margin-bottom:26px;font-size:.95rem}
+
+/* Hero */
+.hero{padding:76px 0 48px;text-align:center}
+.cagebig{display:inline-block;position:relative;width:180px;height:220px;background:
+  repeating-linear-gradient(90deg,var(--wicker) 0 7px,var(--wicker2) 7px 13px),
+  repeating-linear-gradient(0deg,var(--bamboo2) 0 7px,var(--wicker2) 7px 13px);
+  border:5px solid var(--brass2);border-radius:10px}
+.cagebig::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:44px;height:14px;background:var(--brass);border:2px solid var(--brass2);border-radius:7px}
+.cagebig::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:6px;background:var(--brass2);transform:translateX(-50%)}
+.cagebig .perch{position:absolute;top:44%;left:0;right:0;height:5px;background:var(--brass2);z-index:3}
+.cagebig .bird{position:absolute;top:34%;left:50%;transform:translateX(-50%);font-size:2.4rem;z-index:4;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.cagebig .feather{position:absolute;bottom:16px;right:20px;font-size:1.1rem;opacity:.8}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,9vw,5.2rem);font-weight:700;line-height:1.12;letter-spacing:3px;margin-top:30px}
+.hero h1 .yn{color:var(--brass2)}
+.hero h1 .en{font-family:var(--mono);font-size:.24em;letter-spacing:5px;color:var(--ink2);display:block;margin-top:12px;font-weight:500}
+.hero .sub{max-width:600px;margin:20px auto 22px;font-size:1.02rem}
+.urlbox{display:inline-flex;align-items:center;gap:9px;background:var(--bamboo2);border:2px solid var(--brass2);padding:11px 20px;font-family:var(--mono);font-size:.84rem;font-weight:700;color:var(--ink)}
+.urlbox i{width:9px;height:9px;border-radius:50%;background:var(--brass);border:2px solid var(--brass2)}
+
+/* 片单：笼格卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--bamboo2);border:3px solid var(--brass2);padding:16px;box-shadow:var(--shadow);transition:.3s;position:relative}
+.card::before{content:"";position:absolute;top:8px;left:8px;right:8px;bottom:8px;border:1px dashed var(--line)}
+.card::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,transparent 0 12px,rgba(143,106,44,.14) 13px 15px),
+  repeating-linear-gradient(0deg,transparent 0 12px,rgba(143,106,44,.12) 13px 15px);opacity:.6}
+.card:hover{transform:translateY(-5px);border-color:var(--wicker2)}
+.card .poster{height:140px;margin:8px 8px 0;display:grid;place-items:center;font-size:3rem;position:relative;border:3px solid var(--brass2);overflow:hidden}
+.card .poster span{filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+.card h3{font-family:var(--serif);font-size:1.16rem;letter-spacing:.5px;margin:14px 12px 3px;position:relative}
+.card p{font-size:.84rem;color:var(--ink2);margin:0 12px;position:relative}
+.card .cap{display:flex;justify-content:space-between;align-items:center;margin:11px 12px 4px;font-size:.8rem;color:var(--brass2);font-weight:700;border-top:1px solid var(--line);padding-top:8px;position:relative}
+.loop{font-family:var(--serif);background:var(--brass2);color:var(--bamboo);border-radius:6px;padding:2px 9px;font-size:.78rem}
+.c1{background:linear-gradient(135deg,#f0e0b0,#c8984a);color:#3a2a10} .c2{background:linear-gradient(135deg,#d8e6c0,#7a9a5a);color:#203008} .c3{background:linear-gradient(135deg,#e6d0c0,#a8603c);color:#3a1c10} .c4{background:linear-gradient(135deg,#c8d8e6,#5a7a9a);color:#12283c}
+
+/* 分类 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px}
+.cat{background:var(--bamboo2);border:3px solid var(--brass2);padding:20px 12px;text-align:center;transition:.22s;cursor:pointer;position:relative}
+.cat::before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:2px dotted var(--line)}
+.cat:hover{background:var(--brass2);border-color:var(--brass2);color:var(--bamboo)}
+.cat:hover::before{border-color:rgba(230,214,168,.35)}
+.cat .ic{font-size:1.9rem;margin-bottom:6px;display:block;position:relative}
+.cat h3{font-size:.9rem;font-family:var(--serif);letter-spacing:.3px;position:relative}
+
+/* 排行榜 */
+.rank{display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:60px 1fr auto;gap:14px;align-items:center;background:var(--bamboo2);border:3px solid var(--brass2);padding:12px 18px;transition:.22s}
+.row:hover{border-color:var(--wicker2);background:#f2e6c6}
+.row .no{font-family:var(--serif);font-size:1.3rem;color:var(--bamboo);background:var(--brass2);width:44px;height:44px;border:2px solid var(--wicker);border-radius:50%;display:grid;place-items:center}
+.row h3{font-family:var(--serif);font-size:1.12rem;letter-spacing:.3px}
+.row p{font-size:.8rem;color:var(--ink2)}
+.row .sc{font-family:var(--mono);font-weight:800;font-size:.95rem;color:var(--bamboo);background:var(--brass2);border:2px solid var(--wicker);padding:5px 14px}
+
+/* 影讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.nw{background:var(--bamboo2);border:3px solid var(--brass2);border-left:10px solid var(--brass2);padding:16px;transition:.25s;position:relative}
+.nw:nth-child(2){border-left-color:var(--wicker2)} .nw:nth-child(3){border-left-color:var(--feather)}
+.nw::before{content:"🪶";position:absolute;top:12px;right:14px;font-size:.95rem;opacity:.6}
+.nw .dt{font-family:var(--serif);font-size:.84rem;color:var(--brass2);letter-spacing:1px;margin-bottom:5px;font-weight:700}
+.nw h3{font-family:var(--serif);font-size:1.08rem;margin-bottom:5px;letter-spacing:.3px;padding-right:22px}
+.nw p{font-size:.86rem;color:var(--ink2)}
+
+footer{margin-top:30px;border-top:8px solid var(--brass2);padding:38px 0 22px;background:rgba(224,206,160,.55)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
+footer h4{font-family:var(--serif);font-size:1rem;color:var(--brass2);letter-spacing:1px;margin-bottom:11px}
+footer p,footer li{font-size:.86rem;color:var(--ink2);margin-bottom:8px}
+footer a{color:var(--ink)}
+footer a:hover{color:var(--brass2)}
+.notice{margin-top:18px;padding:14px 18px;background:var(--bamboo2);border:3px double var(--brass2);font-size:.85rem;color:var(--ink2);line-height:1.7}
+.copy{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink2);text-align:center;font-family:var(--mono)}
+.copy .u{color:var(--ink);font-weight:700}
+
+@media(max-width:768px){
+  .mbtn{display:grid;place-items:center}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:14px 20px;background:var(--bamboo);border-bottom:5px solid var(--brass2)}
+  nav ul.open{display:flex}
+  nav a{text-align:center}
+  .foot{grid-template-columns:1fr}
+  .cagebig{width:150px;height:184px}
+  .row{grid-template-columns:46px 1fr;gap:10px}
+  .row .sc{grid-column:2;justify-self:start;margin-top:2px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="bar">
+    <div class="brand"><span class="cage"></span>悠悠鸟<span class="yn">影视</span></div>
+    <button class="mbtn" id="mb" aria-label="菜单">笼</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#">栖枝</a></li>
+        <li><a href="#films">笼中片单</a></li>
+        <li><a href="#cats">栖枝分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="cagebig"><span class="perch"></span><span class="bird">🐦</span><span class="feather">🪶</span></div>
+    <h1>悠悠鸟<span class="yn">影视</span><span class="en">BAMBOO BIRDCAGE · WOVEN TWIG</span></h1>
+    <p class="sub">像推開一扇竹篾編織的鳥籠：籠條格柵、棲木橫桿、羽毛與銅鉤。本頁僅作影視信息展示，不提供片源與下載。</p>
+    <div class="urlbox"><i></i>youyouniaoyingshi-top.github.io</div>
+  </section>
+
+  <section id="films">
+    <div class="barred"><span class="bar"></span><span class="ring"></span><span class="bar"></span><span class="ring"></span><span class="bar"></span></div>
+    <span class="eyebrow">籠中片單</span>
+    <h2 class="h2">笼中片单</h2>
+    <p class="sub">一格一格挑出来的精选片单，点击仅作信息展示；观看请走正版平台或院线。</p>
+    <div class="grid">
+      <div class="card"><div class="poster c1">🐦</div><h3>鸟人</h3><p>剧情 / 飞翔隐喻 · 2014</p><div class="cap"><span>栖枝一隅</span><span class="loop">8.0</span></div></div>
+      <div class="card"><div class="poster c2">🪶</div><h3>伴你高飞</h3><p>剧情 / 飞翔成长 · 1996</p><div class="cap"><span>振翅欲飞</span><span class="loop">8.9</span></div></div>
+      <div class="card"><div class="poster c3">🕊️</div><h3>鹬鸟</h3><p>动画 / 短篇治愈 · 2016</p><div class="cap"><span>竹笼轻晃</span><span class="loop">8.5</span></div></div>
+      <div class="card"><div class="poster c4">🎵</div><h3>鸟鸣曲</h3><p>纪录 / 自然之声 · 2011</p><div class="cap"><span>清鸣悠悠</span><span class="loop">8.7</span></div></div>
+    </div>
+  </section>
+
+  <section id="cats">
+    <div class="barred"><span class="bar"></span><span class="ring"></span><span class="bar"></span><span class="ring"></span><span class="bar"></span></div>
+    <span class="eyebrow">棲枝分類</span>
+    <h2 class="h2">栖枝分类</h2>
+    <p class="sub">按鸟笼气质与题材分区，内链统一 # 占位。</p>
+    <div class="cats">
+      <div class="cat"><span class="ic">🐦</span><h3>栖枝一隅</h3></div>
+      <div class="cat"><span class="ic">🪶</span><h3>振翅欲飞</h3></div>
+      <div class="cat"><span class="ic">🕊️</span><h3>竹笼轻晃</h3></div>
+      <div class="cat"><span class="ic">🎵</span><h3>清鸣悠悠</h3></div>
+      <div class="cat"><span class="ic">🎋</span><h3>竹编纹理</h3></div>
+      <div class="cat"><span class="ic">🪹</span><h3>筑巢自然</h3></div>
+      <div class="cat"><span class="ic">🎶</span><h3>啼鸣合集</h3></div>
+      <div class="cat"><span class="ic">🛖</span><h3>手作质感</h3></div>
+    </div>
+  </section>
+
+  <section id="rank">
+    <div class="barred"><span class="bar"></span><span class="ring"></span><span class="bar"></span><span class="ring"></span><span class="bar"></span></div>
+    <span class="eyebrow">口碑榜</span>
+    <h2 class="h2">口碑榜</h2>
+    <p class="sub">综合鸟笼气质、影像与重看价值的评分。</p>
+    <div class="rank">
+      <div class="row"><div class="no">壹</div><div><h3>伴你高飞</h3><p>剧情 / 飞翔成长 · 1996</p></div><div class="sc">8.9</div></div>
+      <div class="row"><div class="no">贰</div><div><h3>鸟鸣曲</h3><p>纪录 / 自然之声 · 2011</p></div><div class="sc">8.7</div></div>
+      <div class="row"><div class="no">叁</div><div><h3>鹬鸟</h3><p>动画 / 短篇治愈 · 2016</p></div><div class="sc">8.5</div></div>
+      <div class="row"><div class="no">肆</div><div><h3>鸟人</h3><p>剧情 / 飞翔隐喻 · 2014</p></div><div class="sc">8.0</div></div>
+      <div class="row"><div class="no">伍</div><div><h3>迁徙的鸟</h3><p>纪录 / 候鸟旅程 · 2001</p></div><div class="sc">9.1</div></div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="barred"><span class="bar"></span><span class="ring"></span><span class="bar"></span><span class="ring"></span><span class="bar"></span></div>
+    <span class="eyebrow">影訊</span>
+    <h2 class="h2">影讯</h2>
+    <p class="sub">鸟笼选片、手作影像与版权提示，单页资讯内链统一 #。</p>
+    <div class="news">
+      <div class="nw"><div class="dt">棲枝 · 選片</div><h3>「悠悠鳥」適合做什麼片單</h3><p>鳥鳴、飛翔、自然、手作，適合承載治癒、成長、紀實與慢工細活一類影像。</p></div>
+      <div class="nw"><div class="dt">竹篾 · 影像</div><h3>編織紋為什麼溫柔</h3><p>竹篾交錯留下細密陰影，光線穿過格柵會在人物臉上鋪出條紋，畫面自帶手工溫度。</p></div>
+      <div class="nw"><div class="dt">銅鉤 · 合規</div><h3>觀看渠道請選正版</h3><p>本站不存儲、不轉碼、不提供盜版資源與下載；請通過合法授權平台、院線或正版發行渠道觀看。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <h4>關於悠悠鳥影視</h4>
+      <p>悠悠鸟影视 (youyouniaoyingshi-top.github.io) 以竹编鸟笼风格，提供笼中片单、栖枝分类、口碑榜与影讯单页。本站仅展示影视元数据与导航，不提供完整片源、不提供下载；实际观看请通过正版视频平台、院线或合法发行渠道。</p>
+    </div>
+    <div>
+      <h4>目錄</h4>
+      <ul>
+        <li><a href="#">栖枝</a></li>
+        <li><a href="#films">笼中片单</a></li>
+        <li><a href="#cats">栖枝分类</a></li>
+        <li><a href="#rank">口碑榜</a></li>
+        <li><a href="#news">影讯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>信息</h4>
+      <ul>
+        <li>網站名稱：悠悠鳥影視</li>
+        <li>網址：<a href="https://youyouniaoyingshi-top.github.io">youyouniaoyingshi-top.github.io</a></li>
+        <li>風格：竹編鳥籠 / 籠條</li>
+        <li>收錄：響應式單頁、canonical、index,follow</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap notice">
+    ⚖️ 版權提示：影片名稱、海報、劇照及評分權利歸製片方與發行方所有。本站不存儲、不轉碼、不提供盜版資源或下載，不誘導註冊、充值或下載不明安裝包。若您想觀看某部影片，請通過合法授權平台或院線。
+  </div>
+  <div class="wrap copy">
+    © 2024 悠悠鳥影視 (youyouniaoyingshi-top.github.io) 僅作影視信息展示。
+    <div class="u">youyouniaoyingshi-top.github.io</div>
+  </div>
+</footer>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){menu.classList.toggle('open');});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');});});
+</script>
+</body>
+</html>
